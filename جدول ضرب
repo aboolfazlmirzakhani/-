@@ -1,0 +1,6 @@
+for i in range(10):
+    
+    print()
+    for g in range(10):
+        
+        print(i*g,end=' ')
