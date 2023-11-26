@@ -1,0 +1,44 @@
+<div><br class="Apple-interchange-newline">#Exercise one
+#برنامه بنویسید که یک عدد دریافت کند و بگوید عدد زوج است یا فرد
+number=int(input("لطفا یک عدد وارد کنید"))
+if number % 2 == 0 :
+    print({number},"عدد زوج است")
+else:
+      print({number},"عدد فرد است")
+#Exercise two
+#برنامه ای بنویسید که یه عدد دو رقمی بگیرد و جمع ان را در خروجی بدهد
+number = int(input("لطفاً یک عدد دو رقمی وارد کنید: "))
+
+if 10 <= number <= 99:
+   
+    tens_digit = number // 10
+    ones_digit = number % 10
+      
+    sum_of_digits = tens_digit + ones_digit
+    
+    print(f"جمع دو رقم عدد {number} برابر با {sum_of_digits} است.")
+else:
+    print("عدد وارد شده باید دو رقمی باشد.")
+#Exercise three
+#برنامه ای بنویسید که یه عدد دو رقمی بگیرد و رقم انها را جا به جا کند
+def swap_two_digits(number):
+    if 10 <= number <= 99:
+        first_digit = number // 10
+        second_digit = number % 10
+        swapped_number = second_digit * 10 + first_digit
+        return swapped_number
+    else:
+        return "لطفا یک عدد دو رقمی وارد کنید."
+
+# عدد دو رقمی را وارد کنید
+input_number = int(input("لطفا یک عدد دو رقمی وارد کنید: "))
+
+result = swap_two_digits(input_number)
+print(f"عدد جابه‌جا شده: {result}")
+#Exercise four
+#برنامه ای بنویسید که یه عدد بگیرد و اعداد مثبت و منفی و صفر را تشخیص و هر یک را با یک رنگ دلخواه نشان دهد
+from colorama import Fore, Style
+
+def change_color(number):
+    if number > 0:
+        colored_number = f"{Fore.RED}{number}
