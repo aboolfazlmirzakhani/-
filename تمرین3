@@ -1,0 +1,13 @@
+import random
+x = random. randint(1,10)
+for i in range(3):
+    i=int (input())
+    if i==x:
+        print('win')
+    else:
+        if i <x:
+            print('small')
+        else:
+            if i>x:
+                print('large')
+    
